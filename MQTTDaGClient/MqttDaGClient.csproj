@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>MqttDaGClient</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Client\**" />
+    <Compile Remove="Service\**" />
+    <EmbeddedResource Remove="Client\**" />
+    <EmbeddedResource Remove="Service\**" />
+    <None Remove="Client\**" />
+    <None Remove="Service\**" />
+    <Page Remove="Client\**" />
+    <Page Remove="Service\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="ClientLog.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.10" />
+    <PackageReference Include="MQTTnet" Version="5.0.1.1416" />
+    <PackageReference Include="MQTTnet.AspNetCore" Version="5.0.1.1416" />
+    <PackageReference Include="MQTTnet.Extensions.Rpc" Version="5.0.1.1416" />
+    <PackageReference Include="MQTTnet.Server" Version="5.0.1.1416" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="ClientLog.txt">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+</Project>

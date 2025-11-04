@@ -1,0 +1,32 @@
+﻿<Window x:Class="MqttDaGService.View.Service"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MqttDaGService.ViewModel"
+        mc:Ignorable="d"
+        Title="Service" Height="420" Width="350"
+         WindowStartupLocation="CenterScreen"
+     
+        >
+    <Grid>
+        <StackPanel>
+            <TextBlock HorizontalAlignment="Center" Margin="0,20,0,4" TextWrapping="NoWrap" Text="主机地址" VerticalAlignment="Top" FontSize="18"/>
+            <TextBox HorizontalAlignment="Center" Margin="0,4" TextWrapping="NoWrap"
+                     Text="{Binding Server.ServerIP }" VerticalAlignment="Top" Width="120"  FontSize="18"/>
+            <TextBlock HorizontalAlignment="Center" Margin="0,4" TextWrapping="NoWrap" Text="端口" VerticalAlignment="Top" FontSize="18"/>
+            <TextBox HorizontalAlignment="Center" Margin="0,4" TextWrapping="NoWrap"
+                     Text="{Binding Server.ServerPort }" VerticalAlignment="Top" Width="120"  FontSize="18"/>
+            <TextBlock HorizontalAlignment="Center"  Margin="0,4"  TextWrapping="NoWrap" Text="用户" VerticalAlignment="Top" FontSize="18"/>
+            <TextBox HorizontalAlignment="Center"  Margin="0,4"  TextWrapping="NoWrap"
+                     Text="{Binding Server.ServerName }" VerticalAlignment="Top" Width="120"  FontSize="18"/>
+            <TextBlock HorizontalAlignment="Center"  Margin="0,4"  TextWrapping="NoWrap" Text="密码" VerticalAlignment="Top" FontSize="18"/>
+            <TextBox HorizontalAlignment="Center"  Margin="0,4" TextWrapping="NoWrap" 
+                     Text="{Binding Server.ServerPwd }" VerticalAlignment="Top" Width="120"  FontSize="18"/>
+        </StackPanel>
+
+        <Button Content="确认" FontSize="18" FontWeight="Normal" HorizontalAlignment="Center"
+                Command="{Binding UpdateServerSettingsCommand }" FontFamily="Microsoft YaHei UI" Margin="0,324,0,0" VerticalAlignment="Top" Height="46" Width="92"/>
+
+    </Grid>
+</Window>
